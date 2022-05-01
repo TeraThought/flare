@@ -4,6 +4,8 @@
 
 # Flare
 
+Learn about Flare's API's in the [Overview](docs/Overview.md)
+
 ## Setup
 Step 1: Create a Firebase Project
 
