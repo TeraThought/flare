@@ -2,13 +2,13 @@ val kotlin_version: String by extra
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    kotlin("plugin.serialization")  version "1.6.10"
+    kotlin("plugin.serialization")  version "1.7.10"
     id("com.android.library")
     id("convention.publication")
 }
 
 group = "com.terathought.enchant"
-version = "1.0.0-alpha11"
+version = "1.0.0-alpha12"
 
 repositories {
     google()
@@ -53,17 +53,17 @@ kotlin {
         val jvmTest by getting
         val commonMain by getting {
             dependencies {
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0-native-mt")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.3.2")
-                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.3.1")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+                implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.4.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
                 implementation(kotlin("test"))
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
 
             }
         }
